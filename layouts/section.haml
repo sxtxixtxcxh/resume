@@ -1,0 +1,5 @@
+.section.vcalendar
+  %h2.title= section[:title]
+  .content
+    - section[:subsections].each do |subsection|
+      = render 'subsection', :subsection => subsection

@@ -1,0 +1,80 @@
+@import partials/base
+
+@import blueprint/reset.sass
+@import blueprint
+
+    
++blueprint-typography("body")
+
+body
+  +blueprint-utilities
+  +blueprint-debug
+  +blueprint-interaction
+
+    
+.hresume
+  h1, h2, h3, h4, h5, h6
+    :color #000
+  +container
+  #header
+    +container
+    :padding-top 10px
+    #contact
+      +column(4)
+      :text-align right
+      address
+        :font-style normal
+        :display block
+        :margin-top 10px
+        .street-address, .extended-address , .country-name
+          :display block
+    #me
+      +column(16,true)
+      h1
+        :font-size 48px
+        :font-weight bold
+        :margin 0
+      h2
+        :font-size 18px
+        :font-weight bold
+  #about .content
+    +push(4)
+    +column(16,true)
+    .subsection
+      :padding-top 10px
+      :padding-bottom 0
+      :margin-bottom 10px
+      p:last-child
+        :margin-bottom 0
+  .section
+    +container
+    h2.title
+      +column(4)
+      :text-align right
+      :font-size  18px
+      :font-weight bold
+    .content
+      +column(16,true)
+    .subsection
+      :padding 40px 20px 0 20px
+      :margin 0 0 40px 0
+      :position relative
+      :border-top 1px solid #000
+      h3
+        :font-weight bold
+        :font-size 14px
+      .experienceHdr
+        :position absolute
+        :top 0
+        :left 0
+        :margin 0 10px
+        :padding 0 5px
+        :list-style-type none
+        :border-bottom 1px solid #000
+        :width = (!blueprint_grid_outer_width * 16) - 30px - !blueprint_grid_margin
+        li
+          :padding 5px
+          :float left
+        .location
+          :float right
+  

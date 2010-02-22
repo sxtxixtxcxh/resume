@@ -1,0 +1,31 @@
+!!!
+%html
+  %head
+    %title= @item[:title]
+    %link{ :href => "/stylesheets/screen.css", :rel => "stylesheet", :type => "text/css", :media => "screen" }
+    %meta{ :content => "text/html; charset=utf-8", "http-equiv" => "Content-Type" }
+  %body
+    .hresume
+      #header.vcard
+        #contact
+          %span.tel +1 425 336 1393
+          %a.email{ :href => "mailto:m@auayan.com" }<
+            m@auayan.com
+
+          %address.adr<
+            %span.street-address 100 Andover Park W.
+            %span.extended-address<
+              Suite 150 
+              %span.post-office-box> #204 
+            %span.locality> Tukwila
+            , 
+            %span.region> Washington 
+            %span.postal-code 98188
+            %span.country-name United States
+        #me
+          %h1.fn<
+            M. David Auayan
+          %h2.role<
+            Front End Web Developer
+      = yield
+    

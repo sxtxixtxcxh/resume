@@ -1,0 +1,132 @@
+@import partials/base
+
+//=============================================================================
+// LINKS BUTTONS
+//=============================================================================
+
+#{!button_button}
+  :margin-left 5px
+button::-moz-focus-inner
+  :padding 0
+  :border 0
+#{!button}
+  :border 0
+  :background none
+  :position relative
+  :float left
+  :text-align left
+  :font-weight normal
+  :padding 0
+  :margin 0
+  :text-decoration none
+  &:hover
+    :text-decoration none
+    :cursor hand
+    .button_content
+      :border = "1px solid" #b7c5e2*1.2
+      :border-bottom = "1px solid" #b7c5e2/1.2
+      :border-right = "1px solid" #b7c5e2/1.2
+  &:active
+    .button_content
+      :border = "1px solid" #b7c5e2/1.2
+      :border-bottom = "1px solid" #b7c5e2*1.2
+      :border-right = "1px solid" #b7c5e2*1.2
+  .button_content
+    :font-family = !font_family
+    :position relative
+    :overflow hidden
+    :background #eee url('/images/lounge/buttons/grey_button_bg.png') repeat-x center right
+    :border 1px solid #b7c5e2
+    :float left
+    :display inline
+    :text-decoration none
+    +rounded(3px)
+    :margin-top 0
+    :font-size 11px
+    &:focus
+      :border 1px solid #576582
+    span
+      :height 23px
+      :line-height 23px
+      :font-size 1em
+      :float left
+      :display inline
+      :color #438dce
+      :margin-right 8px
+      :padding-left 8px
+      :white-space nowrap
+      :text-shadow 0 -1px 1px #fff
+    span.icon
+      :background-position 6px 4px
+      :background-repeat no-repeat
+      :padding-left 28px
+
+#{!small_button}
+  .button_content
+    :background #eee url('/images/lounge/buttons/grey_button_small_bg.png') repeat-x right center
+    :font-size 10px
+    &:focus
+      :border 1px solid #576582
+    span
+      :height 16px
+      :line-height 16px
+      :text-shadow none
+
+#{!go_button}
+  &:hover
+    :cursor hand
+    .button_content
+      :border-bottom = "1px solid" #1b64dc/2
+      :border-right = "1px solid" #1b64dc/2
+      :border-top 1px solid #73ace3
+      :border-left 1px solid #73ace3
+  &:active
+    .button_content
+      :border-top = "1px solid" #1b64dc/2
+      :border-left = "1px solid" #1b64dc/2
+      :border-bottom 1px solid #73ace3
+      :border-right 1px solid #73ace3
+  .button_content
+    :background #1b64dc url('/images/lounge/buttons/blue_button_bg.png') repeat-x right center
+    :border-bottom 1px solid #1b64dc
+    :border-right 1px solid #1b64dc
+    :border-top 1px solid #5ba8ef
+    :border-left 1px solid #5ba8ef
+    &:focus
+      :border 1px solid #576582
+    span
+      :color #FFFFFF
+      :text-shadow 0 -1px #1b64dc, 0 1px #5ba8ef
+      :padding-right 28px
+      :background transparent url('/images/lounge/buttons/button_go_arrow.png') no-repeat right center
+
+#{!big_button}
+  &:hover
+    .button_content
+      :border = "1px solid" #5ba8ef*1.2
+      :border-bottom = "1px solid" #1b64dc/1.2
+      :border-right = "1px solid" #1b64dc/1.2
+  .button_content
+    :height 48px
+    +rounded(5px)
+    :background #1b64dc url('/images/lounge/buttons/big_blue_button_bg.png') repeat-x right center
+    :border-bottom 1px solid #1b64dc
+    :border-right 1px solid #1b64dc
+    :border-top 1px solid #5ba8ef
+    :border-left 1px solid #5ba8ef
+    :margin-bottom 3px
+    +box-shadow(2px, 2px, 3px, rgba(0,0,0,0.5))
+    &:focus
+      :border 1px solid #576582
+    span
+      +rounded(3px)
+      :height 44px
+      :line-height 46px
+      :font-size 16px
+      :font-weight bold
+      :text-transform uppercase
+      :text-shadow 0px 0px 3px #1e609e
+      :margin 1px
+      :border 1px solid #cae6f4
+      :color #FFFFFF 
+      :padding-right 8px

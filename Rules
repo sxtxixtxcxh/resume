@@ -1,0 +1,39 @@
+#!/usr/bin/env ruby
+require 'compass'
+
+Compass.configuration.parse 'content/stylesheets/config.rb'
+
+compile '/stylesheets/*/' do
+   filter :sass, Compass.sass_engine_options
+end
+
+route '/stylesheets/*/' do
+   item.identifier.chop + '.css'
+end
+
+compile '/javascripts/*/' do
+   filter :cogswell
+end
+
+route '/javascripts/*/' do
+   item.identifier.chop + '.min.js'
+end
+
+route '/images/*', :rep => :image do
+  item.identifier
+end
+
+compile '/images/*' do
+  # don't filter or layout
+end
+
+compile '*' do
+   filter :haml
+   layout 'default'
+end
+
+route '*' do
+  item.identifier + 'index.html'
+end
+
+layout '*', :haml, :format => :html5
