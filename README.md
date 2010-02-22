@@ -13,7 +13,7 @@ isn't quite ready.
 I'm still in the middle of converting my old markup to 
 the [hresume microformat][hresume].
 
-So if, despite the forewarning, read on to learn how to... 
+So read on if, despite the forewarning, you still want to... 
 
 Build Your Own
 --------------
