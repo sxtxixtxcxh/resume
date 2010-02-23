@@ -1,6 +1,7 @@
 # All files in the 'lib' directory will be loaded
 # before nanoc starts compiling.
 
+
 #
 # The following code comes from Rails and thus is licensed
 #

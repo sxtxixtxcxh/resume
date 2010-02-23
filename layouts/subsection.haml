@@ -1,24 +1,24 @@
 .subsection.vevent
   - unless subsection[:title].blank?
     %h3.title= subsection[:title]
-
-  %ul.experienceHdr
-    - unless subsection[:duration].blank?
-      %li.year<
-        - unless subsection[:duration][:start].blank?
-          %abbr.dtstart{ :title => subsection[:duration][:start] }>= subsection[:duration][:start].year
-        - if subsection[:duration][:end].blank? 
-          - subsection[:duration][:end] = Time.now
-        &mdash;
-        %abbr.dtend{ :title => subsection[:duration][:end] }>= subsection[:duration][:end].year
-    - unless subsection[:company].blank?
-      %li.org= h(subsection[:company])
-    - unless subsection[:location].blank?
-      %li.location= subsection[:location]
-    - unless subsection[:url].blank?
-      %li.url<
-        %a{ :href => subsection[:url], :target => "_blank" }><
-          = subsection[:url]
+  - unless (subsection[:duration].blank? || subsection[:duration][:start].blank?) && subsection[:company].blank? && subsection[:location].blank? && subsection[:url].blank?
+    %ul.experienceHdr
+      - unless subsection[:duration].blank?
+        %li.year<
+          - unless subsection[:duration][:start].blank?
+            %abbr.dtstart{ :title => subsection[:duration][:start] }>= subsection[:duration][:start].year
+          - if subsection[:duration][:end].blank? 
+            - subsection[:duration][:end] = Time.now
+          &mdash;
+          %abbr.dtend{ :title => subsection[:duration][:end] }>= subsection[:duration][:end].year
+      - unless subsection[:company].blank?
+        %li.org= h(subsection[:company])
+      - unless subsection[:location].blank?
+        %li.location= subsection[:location]
+      - unless subsection[:url].blank?
+        %li.url<
+          %a{ :href => subsection[:url], :target => "_blank" }><
+            = subsection[:url]
 
 
   - unless subsection[:achievements].blank?

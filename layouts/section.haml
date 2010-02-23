@@ -1,4 +1,4 @@
-.section.vcalendar
+.section{ :class => "#{section[:type]} #{ section[:type] == 'skills' ? '' : ' vcalendar' }"  }
   %h2.title= section[:title]
   .content
     - section[:subsections].each do |subsection|

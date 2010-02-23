@@ -1,7 +1,9 @@
+- resume = @site.config[:resume]
+
 !!!
 %html
   %head
-    - title = "M. Dave Auayan"
+    - title = resume[:contact][:name]
     - unless @item[:title].blank?
       - title = title + ' - ' + @item[:title] 
     %title= title
@@ -11,24 +13,35 @@
     .hresume
       #header.vcard
         #contact
-          %span.tel +1 425 336 1393
-          %a.email{ :href => "mailto:m@auayan.com" }<
-            m@auayan.com
+          - unless resume[:contact][:tel].blank?
+            %span.tel= resume[:contact][:tel]
+          - unless resume[:contact][:email].blank?
+            %a.email{ :href => "mailto:#{resume[:contact][:email]}" }<
+              = resume[:contact][:email]
 
           %address.adr<
-            %span.street-address 100 Andover Park W.
-            %span.extended-address<
-              Suite 150 
-              %span.post-office-box> #204 
-            %span.locality> Tukwila
-            , 
-            %span.region> Washington 
-            %span.postal-code 98188
-            %span.country-name United States
+            - unless resume[:contact][:address].blank?
+              - address = resume[:contact][:address]
+            - unless address[:"street-address"].blank?
+              %span.street-address= address[:"street-address"]
+            - unless address[:"extended-address"].blank?
+              %span.extended-address<
+                = address[:"extended-address"]+" "
+                - unless address[:"post-office-box"].blank?
+                  %span.post-office-box>= address[:"post-office-box"]
+            - unless address[:locality].blank?
+              %span.locality>= address[:locality]
+              , 
+            - unless address[:region].blank?
+              %span.region>= address[:region]+" "
+            - unless address[:"postal-code"].blank?
+              %span.postal-code= address[:"postal-code"]+" "
+            - unless address[:"country-name"].blank?
+              %span.country-name= address[:"country-name"]
         #me
           %h1.fn<
-            M. David Auayan
+            = resume[:contact][:name]
           %h2.role<
-            Front End Web Developer
+            = resume[:contact][:role]
       = yield
     
