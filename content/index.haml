@@ -1,10 +1,7 @@
 .section#about
   .content
     .subsection.summary
-      :markdown
-        I am the designer and developer of [lib.rario.us](http://lib.rario.us), a social web application
-        that helps people share their library, reviewed in 2005 on one of Wired.com. I have over 10 years
-        experience in writing HTML and CSS and over 5 years writing PHP and MySQL web applications.
+      = Maruku.new(@site.config[:resume][:contact][:bio]).to_html
 
 - @site.config[:resume][:sections].each do |section|
   = render 'section', :section => section

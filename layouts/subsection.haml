@@ -26,4 +26,5 @@
       - subsection[:achievements].each do |achievement|
         %li= h(achievement)
   - unless subsection[:summary].blank?
-    .summary= h(subsection[:summary])
+    .summary
+      = Maruku.new(subsection[:summary]).to_html
