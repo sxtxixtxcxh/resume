@@ -13,8 +13,8 @@
           %abbr.dtend{ :title => subsection[:duration][:end] }>= subsection[:duration][:end].year
       - unless subsection[:company].blank?
         %li.org= h(subsection[:company])
-      - unless subsection[:location].blank?
-        %li.location= subsection[:location]
+      - unless subsection[:address][:locality].blank?
+        %li.location= "#{subsection[:address][:locality]}, #{subsection[:address][:region]}"
       - unless subsection[:url].blank?
         %li.url<
           %a{ :href => subsection[:url], :target => "_blank" }><
