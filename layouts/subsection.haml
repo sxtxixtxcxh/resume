@@ -1,4 +1,4 @@
-.subsection{:class=>" #{ type.to_permalink } #{ type != 'skills' ? 'vevent' : '' }"}
+.subsection{:class=>" #{ type.to_permalink } #{ type == ('experience' or 'education') ? 'vevent' : '' }"}
   - unless subsection[:title].blank?
     - if type == 'experience'
       .vcard
@@ -14,14 +14,16 @@
         %li.year<
           - unless subsection[:duration][:start].blank?
             %abbr.dtstart{ :title => subsection[:duration][:start] }>= subsection[:duration][:start].year
-          - if subsection[:duration][:end].blank? 
-            - subsection[:duration][:end] = Time.now
-          &mdash;
-          %abbr.dtend{ :title => subsection[:duration][:end] }>= subsection[:duration][:end].year
+          - unless subsection[:duration][:start].year == Time.now.year
+            - if subsection[:duration][:end].blank?
+              - subsection[:duration][:end] = Time.now
+            &mdash;
+            %abbr.dtend{ :title => subsection[:duration][:end] }>= subsection[:duration][:end].year
       - unless subsection[:company].blank?
         %li.org= h(subsection[:company])
-      - unless subsection[:address][:locality].blank?
-        %li.location= "#{subsection[:address][:locality]}, #{subsection[:address][:region]}"
+      - unless subsection[:address].blank?
+        - unless subsection[:address][:locality].blank?
+          %li.location= "#{subsection[:address][:locality]}, #{subsection[:address][:region]}"
       - unless subsection[:url].blank?
         %li.url<
           %a{ :href => subsection[:url], :target => "_blank" }><

@@ -87,7 +87,7 @@ caption { background: #eee; }
 
 .loud { color: #111111; }
 
-body { color: #000; }
+body { color: #333; background: url('/images/background.png'); }
 body .clear { clear: both; }
 body .nowrap { white-space: nowrap; }
 body .clearfix { overflow: hidden; display: inline-block; }
@@ -115,7 +115,7 @@ a, a:visited, a:active { text-decoration: none; border-bottom: 1px solid; }
 abbr { border-bottom: none; }
 
 .hresume { width: 790px; margin: 0 auto; overflow: hidden; display: inline-block; }
-.hresume h1, .hresume h2, .hresume h3, .hresume h4, .hresume h5, .hresume h6 { color: #000; }
+.hresume h1, .hresume h2, .hresume h3, .hresume h4, .hresume h5, .hresume h6 { color: #333; }
 .hresume { display: block; }
 .hresume #header { width: 790px; margin: 0 auto; overflow: hidden; display: inline-block; padding-top: 10px; }
 .hresume #header { display: block; }
@@ -138,11 +138,11 @@ abbr { border-bottom: none; }
 .hresume .section .content { display: inline; float: left; margin-right: 0; width: 670px; }
 * html .hresume .section .content { overflow-x: hidden; }
 .hresume .section .subsection.skills { padding-top: 6px; }
-.hresume .section .subsection { padding: 40px 20px 0 20px; margin: 0 0 40px 0; position: relative; border-top: 1px solid #000; }
+.hresume .section .subsection { padding: 40px 20px 0 20px; margin: 0 0 40px 0; position: relative; border-top: 1px solid #333; }
 .hresume .section .subsection ul { list-style-type: square; padding: 0; margin: 0 0 1.5em 0; }
 .hresume .section .subsection ul li { padding: 0; margin: 0; }
 .hresume .section .subsection h3 { font-weight: bold; font-size: 14px; }
 .hresume .section .subsection .vcard .org { display: none; }
-.hresume .section .subsection .experienceHdr { position: absolute; top: 0; left: 0; margin: 0 10px; padding: 0 5px; list-style-type: none; border-bottom: 1px solid #000; width: 640px; }
+.hresume .section .subsection .experienceHdr { position: absolute; top: 0; left: 0; margin: 0 10px; padding: 0 5px; list-style-type: none; border-bottom: 1px solid #333; width: 640px; }
 .hresume .section .subsection .experienceHdr li { padding: 5px; float: left; }
 .hresume .section .subsection .experienceHdr .location { float: right; }

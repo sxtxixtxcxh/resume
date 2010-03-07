@@ -6,6 +6,11 @@ data_sources:
   layouts_root: /
   type: filesystem_compact
 
+deploy:
+  default:
+    dst:     "sxtxixtxcxh@rario.us:/home/sxtxixtxcxh/m.auayan.com/public"
+    options: [ '-gpPrvz', '--exclude=".git .gitignore"' ]
+
 resume: 
   contact:
     name: "M. Dave Auayan"
@@ -21,27 +26,19 @@ resume:
       postal-code: "98188"
       country-name: "United States"
     bio: |
-      I am the designer and developer of [lib.rario.us](http://lib.rario.us), 
-      a social web application that helps people share their library, reviewed 
-      in 2005 on one of Wired.com. I have over 10 years experience in writing 
-      HTML and CSS and over 5 years writing PHP and MySQL web applications.
+      I am a front end developer with over 10 years experience writing HTML and CSS, and over 
+      5 years working in back end development. I also have several years working in Graphic Design.
+      I am curious, self taught, and if you cut me, I practically bleed internet.
   sections: 
   - title: "Areas of Expertise"
     type: "skills"
     subsections:
 
-    - title: "Computer Software"
-      skills:
-      - "Adobe Photoshop, ImageReady, Illustrator"
-      - "QuarkXPress"
-      - "Macromedia Dreamweaver, Flash"
-      - "Apache Webserver"
-      - "Mac OS 9, 10; Windows 98, 2000, XP, Win7; Linux"
-
     - title: "Computer Languages"
       skills:
       - "PHP"
       - "MySQL"
+      - "Ruby"
       - "JavaScript - including jQuery and Prototype.js"
       - "HTML/XHTML - including Haml"
       - "CSS - including Sass"
@@ -67,8 +64,8 @@ resume:
       - "Developed interactive elements for sites using JavaScript"
       - "Technology Used: XHTML, CSS, JavaScript, Ruby on Rails, PHP"
       summary: |
-        We developed high end real estate websites for clients in the 
-        upper echelons of the market.
+        LuxuryRealEstate.com develops high end real estate websites for
+        clients in the upper echelons of the market.
 
     - title: "Web Producer"
       duration: 
@@ -86,11 +83,11 @@ resume:
       - "Update website content"
       - "Technology Used: XHTML, XML"
       summary: |
-        I formatted articles written onsite during tournaments and 
-        deployed them using a custom built CMS.
+        Wizards of the Coast, among a other things, hosts Magic: The Gathering 
+        tournaments around the world. During these tournaments we'd publish 
+        articles, video and audio.
 
     - title: "Web Designer"
-      display: false
       duration:
         start : 2007-08-06T09:00:00.00-08:00
         end   : 2007-12-22T17:00:00.00-08:00
@@ -108,8 +105,7 @@ resume:
       - "Design sales materials"
       - "Technology Used: PHP, HTML, CSS, JavaScript"
       summary: |
-        I designed a co-branded site for Oracle's Open World conference 
-        at http://oracle.down2night.com
+        down2night.com was a location based, event sharing social network.
 
     - title: "Graphic Artist"
       duration:
@@ -129,10 +125,8 @@ resume:
       - "Coordinate with clients on creating and updating promotional material"
       - "Technology Used: Photoshop, Pagemaker"
       summary: |
-        I was responsible for the creation and management of sales envelopes 
-        for a nationwide client base of photographers. Working within strict 
-        deadlines, I managed my time to work with multiple clients simultaneously, 
-        and output up to 30,000 sales envelopes in a day.
+        Group Photographers Association is a photo processing and product fabrication 
+        lab for special events, school and sports photographers nationwide. 
 
     - title: "Graphic Designer"
       duration:
@@ -152,10 +146,7 @@ resume:
       - "Redesign and maintain http://washingtonphoto.com"
       - "Technology Used: Photoshop, PHP, HTML, CSS, JavaScript"
       summary: |
-        I used Photoshop or the photo processors to get the best possible 
-        photos from digital and analog sources. I provided designs for our 
-        clients for promotional material: signage, booth posters, business 
-        cards, vehicle artwork, and Powerpoint presentations for clients.
+        Washington Photo was a locally owned print and photo shop.
 
     - title: "Graphic Designer"
       duration:
@@ -175,10 +166,7 @@ resume:
       - "Design user interfaces for custom web applications for clients and in-house"
       - "Technology Used: Photoshop, Visual Studio, HTML, CSS, JavaScript"
       summary: |
-        I used Photoshops to provide mock-ups for approval from clients. 
-        Once approved I would then convert the mock-ups to HTML/CSS templates 
-        by hand, and used Visual Studio to deploy. I designed promotional 
-        materials and business cards for the company using Illustrator.
+        SCW Consulting is a small networking and web consulting firm.
 
     - title: "Graphic Designer"
       duration:
@@ -200,9 +188,8 @@ resume:
       - "Design graphics for television"
       - "Technology Used: Photoshop, Illustrator"
       summary: |
-        I used Photoshop for the heavy graphic elements, and used Illustrator 
-        for layout of the ads. The print ads were for use in anything from 
-        high gloss publications to newsprint to web use.
+        IT&E is a telecommunications company, specializing in long distance and 
+        wireless telephony.
 
     - title: "Graphic Artist II"
       duration:
@@ -224,12 +211,27 @@ resume:
       - "Train graphic artists"
       - "Technology Used: Photoshop, Dreamweaver, HTML, CSS"
       summary: |
-        I used primarily Multi-Ad creator to layout ads, Photoshop for any
-        graphic work, all for placement in a QuarkXPress layout of the news 
-        print. For in-house presentations, I used Powerpoint, with custom 
-        graphics using Photoshop. I used Photoshop and Image Ready to 
-        design banner ads for the website.
-
+        Guam Publications, Inc is a Gannett owned publishing company, the largest in 
+        the Micronesia area. We published a daily news paper as well as several weeklies. 
+  - title: "Personal Projects"
+    type: "projects"
+    subsections:
+      - title: "TweetMe.me"
+        url: http://tweetme.me
+        duration: 
+          start : 2010-02-14T09:00:00.00+10:00
+        summary: |
+          TweetMe.me is a web app that uses Google Maps to map geocoded Twitter 
+          posts near your location, determined automatically, written in 
+          JavaScript and HTML5.
+      - title: "lib.rario.us"
+        url: http://lib.rario.us
+        duration: 
+          start : 2006-01-25T09:00:00.00+10:00
+        summary: |
+          lib.rario.us is a web app for cataloging and publishing the contents of 
+          your media shelves. It uses the Amazon Product API, and is written in PHP, 
+          MySQL, HTML and JavaScript.
   - title: "Higher Education"
     type: "education"
     subsections: 

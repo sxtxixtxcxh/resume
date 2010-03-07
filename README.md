@@ -18,7 +18,12 @@ So read on if, despite the forewarning, you still want to...
 Build Your Own
 --------------
 
-You'll need to install Haml, Compass, JSMin, and nanoc gems.
+You'll need to install Haml, Compass, JSMin, Maruku, and nanoc gems.
+
+All the resume data is inside the config.yaml file.
+
+The summary and bio fields are all post processed with Maruku, an 
+implementation of Markdown.
 
 
 Licenses

@@ -10,7 +10,8 @@ body
   +blueprint-utilities
   +blueprint-debug
   +blueprint-interaction
-  :color #000
+  :color #333
+  :background url('/images/background.png')
 a, a:visited, a:active
   :text-decoration none
   :border-bottom 1px solid
@@ -18,7 +19,7 @@ abbr
   :border-bottom none
 .hresume
   h1, h2, h3, h4, h5, h6
-    :color #000
+    :color #333
   +container
   #header
     +container
@@ -67,7 +68,7 @@ abbr
       :padding 40px 20px 0 20px
       :margin 0 0 40px 0
       :position relative
-      :border-top 1px solid #000
+      :border-top 1px solid #333
       ul
         :list-style-type square
         :padding 0
@@ -87,7 +88,7 @@ abbr
         :margin 0 10px
         :padding 0 5px
         :list-style-type none
-        :border-bottom 1px solid #000
+        :border-bottom 1px solid #333
         :width = (!blueprint_grid_outer_width * 17) - 30px - !blueprint_grid_margin
         li
           :padding 5px
