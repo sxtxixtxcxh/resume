@@ -99,6 +99,36 @@ class String #:nodoc:
     self !~ /\S/
   end
 end
+
+def tokenize
+    result = self.name.gsub(/[Ã�Ã�Ã�Ã�Ã�]/, 'a')
+    result.gsub!(/[Ã�Ã�Ã�Ã�]/, 'e')
+    result.gsub!(/[Ã�Ã�Ã�Ã�]/, 'i')
+    result.gsub!(/[Ã�Ã�Ã�Ã�]/, 'o')
+    result.gsub!(/[Ã�Ã�Ã�Ã�]/, 'u')
+    result.gsub!(/[Ã�Å¸]/, 'y')
+    result.gsub!(/[Ã�]/, 'n')
+    result.gsub!(/[Ã�]/, 'c')
+
+    result = result.downcase
+
+    result.gsub!(/[Ã¡Ã Ã¤Ã¢Ã¥]/, 'a')
+    result.gsub!(/[Ã©Ã¨Ã«Ãª]/, 'e')
+    result.gsub!(/[Ã­Ã¬Ã¯Ã®]/, 'i')
+    result.gsub!(/[Ã³Ã²Ã¶Ã´]/, 'o')
+    result.gsub!(/[ÃºÃ¹Ã¼Ã»]/, 'u')
+    result.gsub!(/[Ã½Ã¿]/, 'y')
+    result.gsub!(/[Ã±]/, 'n')
+    result.gsub!(/[Ã§]/, 'c')
+    result.gsub!(/['"]/, '-')                   
+    result.gsub!(/ +/, '-')
+    result.gsub!(/_/, '-')
+    result.gsub!(/(_)$/, '-')
+    result.gsub!(/^(_)/, '-')            
+    result.gsub!(/W+/, '-') # all non-word chars are removed
+    result.gsub!(/-Z/, '') 
+    self.permalink = result
+  end
  
 class Numeric #:nodoc:
   def blank?
@@ -106,3 +136,8 @@ class Numeric #:nodoc:
   end
 end
 
+class String
+  def to_permalink
+      (Iconv.new('US-ASCII//TRANSLIT', 'utf-8').iconv self).gsub(/[^\w\s\-\â€”]/,'').gsub(/[^\w]|[\_]/,' ').split.join('-').downcase
+  end
+end

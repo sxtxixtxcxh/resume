@@ -13,7 +13,7 @@ resume:
     tel: "+1 425 336 1393"
     email: "m@auayan.com"
     address:
-      street-address: "100 Andover Park W."
+      street-address: "100 Andover Pk. W."
       extended-address: "Suite 150"
       post-office-box: "#204"
       locality: "Tukwila"
@@ -30,16 +30,16 @@ resume:
     type: "skills"
     subsections:
 
-    - title: "Software"
-      achievements:
+    - title: "Computer Software"
+      skills:
       - "Adobe Photoshop, ImageReady, Illustrator"
       - "QuarkXPress"
       - "Macromedia Dreamweaver, Flash"
       - "Apache Webserver"
       - "Mac OS 9, 10; Windows 98, 2000, XP, Win7; Linux"
 
-    - title: "Languages"
-      achievements:
+    - title: "Computer Languages"
+      skills:
       - "PHP"
       - "MySQL"
       - "JavaScript - including jQuery and Prototype.js"
@@ -48,7 +48,7 @@ resume:
       - "XML"
 
   - title: "Employment History"
-    type: "employment"
+    type: "experience"
     subsections: 
 
     - title: "Front End Developer"
@@ -224,15 +224,14 @@ resume:
       - "Technology Used: Photoshop, Dreamweaver, HTML, CSS"
       summary: |
         I used primarily Multi-Ad creator to layout ads, Photoshop for any
-         graphic work, all for placement in a QuarkXPress layout of the news 
-         print. For in-house presentations, I used Powerpoint, with custom 
-         graphics using Photoshop. I used Photoshop and Image Ready to 
-         design banner ads for the website.
+        graphic work, all for placement in a QuarkXPress layout of the news 
+        print. For in-house presentations, I used Powerpoint, with custom 
+        graphics using Photoshop. I used Photoshop and Image Ready to 
+        design banner ads for the website.
 
   - title: "Higher Education"
     type: "education"
     subsections: 
-
     - title: "University of Guam"
       url: "http://uog.edu"
       address:
@@ -244,4 +243,6 @@ resume:
       duration: 
         start : 1998-09-01T09:00:00.00+10:00
         end   : 2000-12-01T09:00:00.00+10:00
+      summary: |
+        I majored in Mass Communication and took classes in Broadcasting, Design, Art, Photography
 

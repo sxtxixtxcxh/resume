@@ -1,6 +1,13 @@
-.subsection.vevent
+.subsection{:class=>" #{ type.to_permalink } #{ type != 'skills' ? 'vevent' : '' }"}
   - unless subsection[:title].blank?
-    %h3.title= subsection[:title]
+    - if type == 'experience'
+      .vcard
+        %h3.title
+          = subsection[:title]
+        %a{ :href=>"#full-name", :class=>'include'}
+    - else
+      %h3.title= subsection[:title]
+    
   - unless (subsection[:duration].blank? || subsection[:duration][:start].blank?) && subsection[:company].blank? && subsection[:location].blank? && subsection[:url].blank?
     %ul.experienceHdr
       - unless subsection[:duration].blank?
@@ -25,6 +32,12 @@
     %ul.achievements
       - subsection[:achievements].each do |achievement|
         %li= h(achievement)
+        
+  - unless subsection[:skills].blank?
+    %ul.skills
+      - subsection[:skills].each do |skill|
+        %li.skill{:rel=>'tag'}= h(skill)
+
   - unless subsection[:summary].blank?
     .summary
       = Maruku.new(subsection[:summary]).to_html

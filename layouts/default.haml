@@ -1,5 +1,4 @@
 - resume = @site.config[:resume]
-
 !!!
 %html
   %head
@@ -8,10 +7,11 @@
       - title = title + ' - ' + @item[:title] 
     %title= title
     %link{ :href => "/stylesheets/screen.css", :rel => "stylesheet", :type => "text/css", :media => "screen" }
+    %link{ :href => "/stylesheets/screen.css", :rel => "stylesheet", :type => "text/css", :media => "print" }
     %meta{ :content => "text/html; charset=utf-8", "http-equiv" => "Content-Type" }
   %body
     .hresume
-      #header.vcard
+      #header.vcard.contact
         #contact
           - unless resume[:contact][:tel].blank?
             %span.tel= resume[:contact][:tel]
@@ -39,7 +39,7 @@
             - unless address[:"country-name"].blank?
               %span.country-name= address[:"country-name"]
         #me
-          %h1.fn<
+          %h1.fn#full-name<
             = resume[:contact][:name]
           %h2.role<
             = resume[:contact][:role]

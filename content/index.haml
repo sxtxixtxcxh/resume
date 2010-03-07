@@ -4,4 +4,5 @@
       = Maruku.new(@site.config[:resume][:contact][:bio]).to_html
 
 - @site.config[:resume][:sections].each do |section|
-  = render 'section', :section => section
+  = render 'section', {:section => section} unless section[:display] === false
+  

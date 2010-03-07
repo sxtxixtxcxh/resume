@@ -1,7 +1,11 @@
 #!/usr/bin/env ruby
 require 'compass'
+require 'maruku'
 
 Compass.configuration.parse 'content/stylesheets/config.rb'
+
+
+### Compilation rules
 
 compile '/stylesheets/*/' do
    filter :sass, Compass.sass_engine_options
@@ -31,6 +35,8 @@ compile '*' do
    filter :haml
    layout 'default'
 end
+
+### Routing rules
 
 route '*' do
   item.identifier + 'index.html'

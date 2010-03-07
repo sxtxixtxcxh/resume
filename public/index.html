@@ -3,20 +3,21 @@
   <head>
     <title>M. Dave Auayan - Résumé</title>
     <link href='/stylesheets/screen.css' media='screen' rel='stylesheet' type='text/css'>
+    <link href='/stylesheets/screen.css' media='print' rel='stylesheet' type='text/css'>
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
   </head>
   <body>
     <div class='hresume'>
-      <div class='vcard' id='header'>
+      <div class='vcard contact' id='header'>
         <div id='contact'>
           <span class='tel'>+1 425 336 1393</span>
           <a class='email' href='mailto:m@auayan.com'>m@auayan.com</a>
-          <address class='adr'><span class='street-address'>100 Andover Park W.</span>
+          <address class='adr'><span class='street-address'>100 Andover Pk. W.</span>
           <span class='extended-address'>Suite 150 <span class='post-office-box'>#204</span></span><span class='locality'>Tukwila</span>, <span class='region'>Washington </span><span class='postal-code'>98188 </span>
           <span class='country-name'>United States</span></address>
         </div>
         <div id='me'>
-          <h1 class='fn'>M. Dave Auayan</h1>
+          <h1 class='fn' id='full-name'>M. Dave Auayan</h1>
           <h2 class='role'>Front End Developer</h2>
         </div>
       </div>
@@ -27,39 +28,44 @@
           </div>
         </div>
       </div>
-      <div class='section skills'>
+      <div class='section' id='skills'>
         <h2 class='title'>Areas of Expertise</h2>
         <div class='content'>
-          <div class='subsection vevent'>
-            <h3 class='title'>Software</h3>
-            <ul class='achievements'>
-              <li>Adobe Photoshop, ImageReady, Illustrator</li>
-              <li>QuarkXPress</li>
-              <li>Macromedia Dreamweaver, Flash</li>
-              <li>Apache Webserver</li>
-              <li>Mac OS 9, 10; Windows 98, 2000, XP, Win7; Linux</li>
+          <div class='skills subsection'>
+            <h3 class='title'>Computer Software</h3>
+            <ul class='skills'>
+              <li class='skill' rel='tag'>Adobe Photoshop, ImageReady, Illustrator</li>
+              <li class='skill' rel='tag'>QuarkXPress</li>
+              <li class='skill' rel='tag'>Macromedia Dreamweaver, Flash</li>
+              <li class='skill' rel='tag'>Apache Webserver</li>
+              <li class='skill' rel='tag'>Mac OS 9, 10; Windows 98, 2000, XP, Win7; Linux</li>
             </ul>
           </div>
-          <div class='subsection vevent'>
-            <h3 class='title'>Languages</h3>
-            <ul class='achievements'>
-              <li>PHP</li>
-              <li>MySQL</li>
-              <li>JavaScript - including jQuery and Prototype.js</li>
-              <li>HTML/XHTML - including Haml</li>
-              <li>CSS - including Sass</li>
-              <li>XML</li>
+          <div class='skills subsection'>
+            <h3 class='title'>Computer Languages</h3>
+            <ul class='skills'>
+              <li class='skill' rel='tag'>PHP</li>
+              <li class='skill' rel='tag'>MySQL</li>
+              <li class='skill' rel='tag'>JavaScript - including jQuery and Prototype.js</li>
+              <li class='skill' rel='tag'>HTML/XHTML - including Haml</li>
+              <li class='skill' rel='tag'>CSS - including Sass</li>
+              <li class='skill' rel='tag'>XML</li>
             </ul>
           </div>
         </div>
       </div>
-      <div class='employment section vcalendar'>
+      <div class='section vcalendar' id='experience'>
         <h2 class='title'>Employment History</h2>
         <div class='content'>
-          <div class='subsection vevent'>
-            <h3 class='title'>Front End Developer</h3>
+          <div class='experience subsection vevent'>
+            <div class='vcard'>
+              <h3 class='title'>
+                Front End Developer
+              </h3>
+              <a class='include' href='#full-name'></a>
+            </div>
             <ul class='experienceHdr'>
-              <li class='year'><abbr class='dtstart' title='Mon Jan 07 09:00:00 -0800 2008'>2008</abbr>&mdash;<abbr class='dtend' title='Tue Feb 23 23:55:56 -0800 2010'>2010</abbr></li>
+              <li class='year'><abbr class='dtstart' title='Mon Jan 07 09:00:00 -0800 2008'>2008</abbr>&mdash;<abbr class='dtend' title='Sat Mar 06 17:25:20 -0800 2010'>2010</abbr></li>
               <li class='org'>LuxuryRealEstate.com</li>
               <li class='location'>Seattle, Washington</li>
               <li class='url'><a href='http://www.luxuryrealestate.com' target='_blank'>http://www.luxuryrealestate.com</a></li>
@@ -73,10 +79,15 @@
               <p>We developed high end real estate websites for clients in the upper echelons of the market.</p>
             </div>
           </div>
-          <div class='subsection vevent'>
-            <h3 class='title'>Web Producer</h3>
+          <div class='experience subsection vevent'>
+            <div class='vcard'>
+              <h3 class='title'>
+                Web Producer
+              </h3>
+              <a class='include' href='#full-name'></a>
+            </div>
             <ul class='experienceHdr'>
-              <li class='year'><abbr class='dtstart' title='Wed Oct 10 10:00:00 -0700 2007'>2007</abbr>&mdash;<abbr class='dtend' title='Tue Feb 23 23:55:56 -0800 2010'>2010</abbr></li>
+              <li class='year'><abbr class='dtstart' title='Wed Oct 10 10:00:00 -0700 2007'>2007</abbr>&mdash;<abbr class='dtend' title='Sat Mar 06 17:25:20 -0800 2010'>2010</abbr></li>
               <li class='org'>Wizards of the Coast</li>
               <li class='location'>Renton, Washington</li>
               <li class='url'><a href='http://wizards.com' target='_blank'>http://wizards.com</a></li>
@@ -89,8 +100,13 @@
               <p>I formatted articles written onsite during tournaments and deployed them using a custom built CMS.</p>
             </div>
           </div>
-          <div class='subsection vevent'>
-            <h3 class='title'>Web Designer</h3>
+          <div class='experience subsection vevent'>
+            <div class='vcard'>
+              <h3 class='title'>
+                Web Designer
+              </h3>
+              <a class='include' href='#full-name'></a>
+            </div>
             <ul class='experienceHdr'>
               <li class='year'><abbr class='dtstart' title='Mon Aug 06 10:00:00 -0700 2007'>2007</abbr>&mdash;<abbr class='dtend' title='Sat Dec 22 17:00:00 -0800 2007'>2007</abbr></li>
               <li class='org'>down2night.com</li>
@@ -106,8 +122,13 @@
               <p>I designed a co-branded site for Oracle&#8217;s Open World conference at http://oracle.down2night.com</p>
             </div>
           </div>
-          <div class='subsection vevent'>
-            <h3 class='title'>Graphic Artist</h3>
+          <div class='experience subsection vevent'>
+            <div class='vcard'>
+              <h3 class='title'>
+                Graphic Artist
+              </h3>
+              <a class='include' href='#full-name'></a>
+            </div>
             <ul class='experienceHdr'>
               <li class='year'><abbr class='dtstart' title='Tue Jul 31 10:00:00 -0700 2007'>2007</abbr>&mdash;<abbr class='dtend' title='Mon Jul 31 18:00:00 -0700 2006'>2006</abbr></li>
               <li class='org'>Group Photographers Association</li>
@@ -123,8 +144,13 @@
               <p>I was responsible for the creation and management of sales envelopes for a nationwide client base of photographers. Working within strict deadlines, I managed my time to work with multiple clients simultaneously, and output up to 30,000 sales envelopes in a day.</p>
             </div>
           </div>
-          <div class='subsection vevent'>
-            <h3 class='title'>Graphic Designer</h3>
+          <div class='experience subsection vevent'>
+            <div class='vcard'>
+              <h3 class='title'>
+                Graphic Designer
+              </h3>
+              <a class='include' href='#full-name'></a>
+            </div>
             <ul class='experienceHdr'>
               <li class='year'><abbr class='dtstart' title='Sat Jul 01 10:00:00 -0700 2006'>2006</abbr>&mdash;<abbr class='dtend' title='Sun Jul 01 10:00:00 -0700 2007'>2007</abbr></li>
               <li class='org'>Washington Photo &amp; Digital</li>
@@ -141,8 +167,13 @@
               <p>I used Photoshop or the photo processors to get the best possible photos from digital and analog sources. I provided designs for our clients for promotional material: signage, booth posters, business cards, vehicle artwork, and Powerpoint presentations for clients.</p>
             </div>
           </div>
-          <div class='subsection vevent'>
-            <h3 class='title'>Graphic Designer</h3>
+          <div class='experience subsection vevent'>
+            <div class='vcard'>
+              <h3 class='title'>
+                Graphic Designer
+              </h3>
+              <a class='include' href='#full-name'></a>
+            </div>
             <ul class='experienceHdr'>
               <li class='year'><abbr class='dtstart' title='Tue Jul 01 10:00:00 -0700 2003'>2003</abbr>&mdash;<abbr class='dtend' title='Thu Jul 01 10:00:00 -0700 2004'>2004</abbr></li>
               <li class='org'>SCW Consulting</li>
@@ -158,8 +189,13 @@
               <p>I used Photoshops to provide mock-ups for approval from clients. Once approved I would then convert the mock-ups to HTML/CSS templates by hand, and used Visual Studio to deploy. I designed promotional materials and business cards for the company using Illustrator.</p>
             </div>
           </div>
-          <div class='subsection vevent'>
-            <h3 class='title'>Graphic Designer</h3>
+          <div class='experience subsection vevent'>
+            <div class='vcard'>
+              <h3 class='title'>
+                Graphic Designer
+              </h3>
+              <a class='include' href='#full-name'></a>
+            </div>
             <ul class='experienceHdr'>
               <li class='year'><abbr class='dtstart' title='Sat Nov 30 15:00:00 -0800 2002'>2002</abbr>&mdash;<abbr class='dtend' title='Tue Apr 15 00:00:00 -0700 2003'>2003</abbr></li>
               <li class='org'>IT&amp;E</li>
@@ -177,8 +213,13 @@
               <p>I used Photoshop for the heavy graphic elements, and used Illustrator for layout of the ads. The print ads were for use in anything from high gloss publications to newsprint to web use.</p>
             </div>
           </div>
-          <div class='subsection vevent'>
-            <h3 class='title'>Graphic Artist II</h3>
+          <div class='experience subsection vevent'>
+            <div class='vcard'>
+              <h3 class='title'>
+                Graphic Artist II
+              </h3>
+              <a class='include' href='#full-name'></a>
+            </div>
             <ul class='experienceHdr'>
               <li class='year'><abbr class='dtstart' title='Mon Jul 31 16:00:00 -0700 2000'>2000</abbr>&mdash;<abbr class='dtend' title='Sat Nov 30 23:00:00 -0800 2002'>2002</abbr></li>
               <li class='org'>Guam Publications, Inc</li>
@@ -198,16 +239,19 @@
           </div>
         </div>
       </div>
-      <div class='education section vcalendar'>
+      <div class='section vcalendar' id='education'>
         <h2 class='title'>Higher Education</h2>
         <div class='content'>
-          <div class='subsection vevent'>
+          <div class='education subsection vevent'>
             <h3 class='title'>University of Guam</h3>
             <ul class='experienceHdr'>
               <li class='year'><abbr class='dtstart' title='Mon Aug 31 16:00:00 -0700 1998'>1998</abbr>&mdash;<abbr class='dtend' title='Thu Nov 30 15:00:00 -0800 2000'>2000</abbr></li>
               <li class='location'>Mangilao, Guam</li>
               <li class='url'><a href='http://uog.edu' target='_blank'>http://uog.edu</a></li>
             </ul>
+            <div class='summary'>
+              <p>I majored in Mass Communication and took classes in Broadcasting, Design, Art, Photography</p>
+            </div>
           </div>
         </div>
       </div>
