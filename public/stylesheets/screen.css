@@ -143,6 +143,6 @@ abbr { border-bottom: none; }
 .hresume .section .subsection ul li { padding: 0; margin: 0; }
 .hresume .section .subsection h3 { font-weight: bold; font-size: 14px; }
 .hresume .section .subsection .vcard .org { display: none; }
-.hresume .section .subsection .experienceHdr { position: absolute; top: 0; left: 0; margin: 0 10px; padding: 0 5px; list-style-type: none; border-bottom: 1px solid #333; width: 640px; }
+.hresume .section .subsection .experienceHdr { position: absolute; top: 0; left: 0; margin: 0 10px; padding: 0 5px; list-style-type: none; border-bottom: 1px solid #ccc; width: 640px; }
 .hresume .section .subsection .experienceHdr li { padding: 5px; float: left; }
 .hresume .section .subsection .experienceHdr .location { float: right; }
