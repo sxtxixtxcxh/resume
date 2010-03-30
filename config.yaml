@@ -229,8 +229,8 @@ resume:
         duration:
           start: 2009-08-29T03:47:13.00+10:00
         summary: |
-          This is a web service that attempts to geolocate the referrer by it's
-          IP address. API documentation is here: 
+          This is a web service that attempts to geolocate the referrer by IP address. 
+          API documentation is here: 
           [http://docs.prototypeapps.com/geoip:api](http://docs.prototypeapps.com/geoip:api)
       - title: "lib.rario.us"
         url: http://lib.rario.us
