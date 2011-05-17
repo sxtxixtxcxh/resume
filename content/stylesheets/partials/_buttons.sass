@@ -4,12 +4,12 @@
 // LINKS BUTTONS
 //=============================================================================
 
-#{!button_button}
+#{$button_button}
   :margin-left 5px
 button::-moz-focus-inner
   :padding 0
   :border 0
-#{!button}
+#{$button}
   :border 0
   :background none
   :position relative
@@ -23,16 +23,16 @@ button::-moz-focus-inner
     :text-decoration none
     :cursor hand
     .button_content
-      :border = "1px solid" #b7c5e2*1.2
-      :border-bottom = "1px solid" #b7c5e2/1.2
-      :border-right = "1px solid" #b7c5e2/1.2
+      :border "1px solid" #b7c5e2*1.2
+      :border-bottom "1px solid" #b7c5e2/1.2
+      :border-right "1px solid" #b7c5e2/1.2
   &:active
     .button_content
-      :border = "1px solid" #b7c5e2/1.2
-      :border-bottom = "1px solid" #b7c5e2*1.2
-      :border-right = "1px solid" #b7c5e2*1.2
+      :border "1px solid" #b7c5e2/1.2
+      :border-bottom "1px solid" #b7c5e2*1.2
+      :border-right "1px solid" #b7c5e2*1.2
   .button_content
-    :font-family = !font_family
+    :font-family $font_family
     :position relative
     :overflow hidden
     :background #eee url('/images/lounge/buttons/grey_button_bg.png') repeat-x center right
@@ -61,7 +61,7 @@ button::-moz-focus-inner
       :background-repeat no-repeat
       :padding-left 28px
 
-#{!small_button}
+#{$small_button}
   .button_content
     :background #eee url('/images/lounge/buttons/grey_button_small_bg.png') repeat-x right center
     :font-size 10px
@@ -72,18 +72,18 @@ button::-moz-focus-inner
       :line-height 16px
       :text-shadow none
 
-#{!go_button}
+#{$go_button}
   &:hover
     :cursor hand
     .button_content
-      :border-bottom = "1px solid" #1b64dc/2
-      :border-right = "1px solid" #1b64dc/2
+      :border-bottom "1px solid" #1b64dc/2
+      :border-right "1px solid" #1b64dc/2
       :border-top 1px solid #73ace3
       :border-left 1px solid #73ace3
   &:active
     .button_content
-      :border-top = "1px solid" #1b64dc/2
-      :border-left = "1px solid" #1b64dc/2
+      :border-top "1px solid" #1b64dc/2
+      :border-left "1px solid" #1b64dc/2
       :border-bottom 1px solid #73ace3
       :border-right 1px solid #73ace3
   .button_content
@@ -100,12 +100,12 @@ button::-moz-focus-inner
       :padding-right 28px
       :background transparent url('/images/lounge/buttons/button_go_arrow.png') no-repeat right center
 
-#{!big_button}
+#{$big_button}
   &:hover
     .button_content
-      :border = "1px solid" #5ba8ef*1.2
-      :border-bottom = "1px solid" #1b64dc/1.2
-      :border-right = "1px solid" #1b64dc/1.2
+      :border "1px solid" #5ba8ef*1.2
+      :border-bottom "1px solid" #1b64dc/1.2
+      :border-right "1px solid" #1b64dc/1.2
   .button_content
     :height 48px
     +rounded(5px)

@@ -47,10 +47,39 @@ resume:
   - title: "Employment History"
     type: "experience"
     subsections: 
-
+    - title: "Front End Developer"
+      duration:
+        start : 2010-08-16T09:00:00.00-08:00
+      company: "Substantial.com"
+      url: http://substantial.com
+      address:
+          street-address: "1652 20th Ave"
+          locality: "Seattle"
+          region: "Washington"
+          postal-code: "98122"
+          country-name: "United States"
+      summary: |
+        Substantial is a small startup designing and developing websites 
+        for several large companies, including 8inc, CitiBank, Kanye West and others.
+    - title: "Developer"
+      duration:
+        start : 2010-04-16T09:00:00.00-08:00
+      company: "Nology Media"
+      url: http://nologymedia.com
+      address:
+          street-address: "1325 Fourth Avenue"
+          extended-street-address: "Ste. 510"
+          locality: "Seattle"
+          region: "Washington"
+          postal-code: "98101"
+          country-name: "United States"
+      summary: |
+        Nology Media is a new media public relations start up, using social media to plan, execute 
+        and manage PR campaigns.
     - title: "Front End Developer"
       duration: 
         start : 2008-01-07T09:00:00.00-08:00
+        end   : 2010-08-13T17:00:00.00-08:00
       company: "LuxuryRealEstate.com"
       url: http://www.luxuryrealestate.com
       address:

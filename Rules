@@ -2,7 +2,7 @@
 require 'compass'
 require 'maruku'
 
-Compass.configuration.parse 'content/stylesheets/config.rb'
+Compass.add_project_configuration('content/stylesheets/config.rb')
 
 
 ### Compilation rules
