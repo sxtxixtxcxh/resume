@@ -170,7 +170,7 @@ abbr { border-bottom: none; }
 /* line 32, content/stylesheets/screen.sass */
 .hresume #header #contact address { font-style: normal; display: block; margin-top: 10px; }
 /* line 36, content/stylesheets/screen.sass */
-.hresume #header #contact address .street-address, .hresume #header #contact address .extended-address, .hresume #header #contact address .country-name, .hresume #header #contact address .postal-code { display: block; }
+.hresume #header #contact address .street-address, .hresume #header #contact address .extended-address, .hresume #header #contact address .region, .hresume #header #contact address .country-name, .hresume #header #contact address .postal-code { display: block; }
 /* line 39, content/stylesheets/screen.sass */
 .hresume #header #me { display: inline; float: left; margin-right: 0; width: 670px; }
 /* line 147, /Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
@@ -180,38 +180,38 @@ abbr { border-bottom: none; }
 /* line 45, content/stylesheets/screen.sass */
 .hresume #header #me h2 { font-size: 18px; font-weight: bold; margin: 0 0 0 20px; }
 /* line 49, content/stylesheets/screen.sass */
-.hresume #about .content { display: inline; float: left; position: relative; margin: 0 -120px 1.5em 120px; display: inline; float: left; margin-right: 0; width: 670px; }
+.hresume #about .content { display: inline; float: left; margin-right: 0; width: 790px; }
 /* line 147, /Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html .hresume #about .content { overflow-x: hidden; }
-/* line 52, content/stylesheets/screen.sass */
+/* line 51, content/stylesheets/screen.sass */
 .hresume #about .content .subsection { padding-top: 10px; padding-bottom: 0; margin-bottom: 10px; }
-/* line 56, content/stylesheets/screen.sass */
+/* line 55, content/stylesheets/screen.sass */
 .hresume #about .content .subsection p:last-child { margin-bottom: 0; }
-/* line 58, content/stylesheets/screen.sass */
-.hresume .section { width: 790px; margin: 0 auto; overflow: hidden; *zoom: 1; }
-/* line 60, content/stylesheets/screen.sass */
-.hresume .section h2.title { display: inline; float: left; margin-right: 10px; width: 110px; text-align: right; font-size: 18px; font-weight: bold; }
+/* line 57, content/stylesheets/screen.sass */
+.hresume .section { width: 790px; margin: 0 auto; overflow: hidden; *zoom: 1; position: relative; padding-left: 120px; }
+/* line 61, content/stylesheets/screen.sass */
+.hresume .section h2.title { display: inline; float: left; margin-right: 10px; width: 110px; display: inline; float: left; position: relative; margin-left: -120px; text-align: right; font-size: 18px; font-weight: bold; }
 /* line 147, /Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html .hresume .section h2.title { overflow-x: hidden; }
-/* line 65, content/stylesheets/screen.sass */
+/* line 67, content/stylesheets/screen.sass */
 .hresume .section .content { display: inline; float: left; margin-right: 0; width: 670px; }
 /* line 147, /Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html .hresume .section .content { overflow-x: hidden; }
-/* line 67, content/stylesheets/screen.sass */
-.hresume .section .subsection.skills { padding-top: 6px; }
 /* line 69, content/stylesheets/screen.sass */
+.hresume .section .subsection.skills { padding-top: 6px; }
+/* line 71, content/stylesheets/screen.sass */
 .hresume .section .subsection { padding: 40px 20px 0 20px; margin: 0 0 40px 0; position: relative; border-top: 1px solid #333333; }
-/* line 74, content/stylesheets/screen.sass */
+/* line 76, content/stylesheets/screen.sass */
 .hresume .section .subsection ul { list-style-type: square; padding: 0; margin: 0 0 1.5em 0; }
-/* line 78, content/stylesheets/screen.sass */
+/* line 80, content/stylesheets/screen.sass */
 .hresume .section .subsection ul li { padding: 0; margin: 0; }
-/* line 81, content/stylesheets/screen.sass */
+/* line 83, content/stylesheets/screen.sass */
 .hresume .section .subsection h3 { font-weight: bold; font-size: 14px; }
-/* line 84, content/stylesheets/screen.sass */
-.hresume .section .subsection .vcard .org { display: none; }
 /* line 86, content/stylesheets/screen.sass */
+.hresume .section .subsection .vcard .org { display: none; }
+/* line 88, content/stylesheets/screen.sass */
 .hresume .section .subsection .experienceHdr { position: absolute; top: 0; left: 0; margin: 0 10px; padding: 0 5px; list-style-type: none; border-bottom: 1px solid #cccccc; width: 640px; }
-/* line 95, content/stylesheets/screen.sass */
+/* line 97, content/stylesheets/screen.sass */
 .hresume .section .subsection .experienceHdr li { padding: 5px; float: left; }
-/* line 98, content/stylesheets/screen.sass */
+/* line 100, content/stylesheets/screen.sass */
 .hresume .section .subsection .experienceHdr .location { float: right; }

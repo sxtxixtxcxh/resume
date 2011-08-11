@@ -33,7 +33,7 @@ abbr
         :font-style normal
         :display block
         :margin-top 10px
-        .street-address, .extended-address , .country-name, .postal-code
+        .street-address, .extended-address, .region, .country-name, .postal-code
           :display block
           
     #me
@@ -47,8 +47,7 @@ abbr
         :font-weight bold
         :margin 0 0 0 20px
   #about .content
-    +push(3)
-    +column(17,true)
+    +column(20,true)
     .subsection
       :padding-top 10px
       :padding-bottom 0
@@ -57,8 +56,11 @@ abbr
         :margin-bottom 0
   .section
     +container
+    position: relative
+    padding-left: $blueprint_grid_width*3 + $blueprint_grid_margin*2 + 10
     h2.title
       +column(3)
+      +pull(3)
       :text-align right
       :font-size  18px
       :font-weight bold

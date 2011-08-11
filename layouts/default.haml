@@ -6,6 +6,8 @@
     - unless @item[:title].blank?
       - title = title + ' - ' + @item[:title] 
     %title= title
+    %script{ :type => 'text/javascript', :src => '/javascripts/lib/jquery.min.js'}
+    %script{ :type => 'text/javascript', :src => '/javascripts/app.min.js'}
     %link{ :href => "/stylesheets/screen.css", :rel => "stylesheet", :type => "text/css", :media => "screen" }
     %link{ :href => "/stylesheets/screen.css", :rel => "stylesheet", :type => "text/css", :media => "print" }
     %meta{ :content => "text/html; charset=utf-8", "http-equiv" => "Content-Type" }
