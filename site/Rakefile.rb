@@ -11,7 +11,7 @@ end
 
 desc "Run the preview server at http://localhost:4567"
 task :preview do
-  system("middleman server --livereload")
+  system("middleman server")
 end
 
 desc "Deploy website via rsync"
