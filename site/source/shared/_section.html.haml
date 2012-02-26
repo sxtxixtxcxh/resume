@@ -2,4 +2,4 @@
   %h2.title= section[:title]
   .content
     - section[:subsections].each do |subsection|
-      = render 'subsection', {:subsection => subsection, :type => section[:type]} unless subsection[:display] === false
+      = partial 'shared/subsection', :locals => {:subsection => subsection, :type => section[:type]} unless subsection[:display] === false

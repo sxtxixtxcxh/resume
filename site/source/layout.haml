@@ -1,29 +1,29 @@
-- resume = @site.config[:resume]
 !!!
 %html
   %head
-    - title = resume[:contact][:name]
-    - unless @item[:title].blank?
-      - title = title + ' - ' + @item[:title] 
+    %meta{ :charset => "utf-8" }
+    - name = data.resume.contact.name
+    - title = name[:"given-name"][0,1] + '. '+name[:nickname]+' ' + name[:"family-name"]
+    - unless data.page[:title].blank?
+      - title = title + ' - ' + h(data.page[:title]) 
     %title= title
-    %script{ :type => 'text/javascript', :src => '/javascripts/lib/jquery.min.js'}
-    %script{ :type => 'text/javascript', :src => '/javascripts/app.min.js'}
+    %script{ :type => 'text/javascript', :src => '/javascripts/lib/jquery.js'}
+    %script{ :type => 'text/javascript', :src => '/javascripts/app.js'}
     %link{ :href => "/stylesheets/screen.css", :rel => "stylesheet", :type => "text/css", :media => "screen" }
     %link{ :href => "/stylesheets/screen.css", :rel => "stylesheet", :type => "text/css", :media => "print" }
-    %meta{ :content => "text/html; charset=utf-8", "http-equiv" => "Content-Type" }
   %body
     .hresume
       #header.vcard.contact
         #contact
-          - unless resume[:contact][:tel].blank?
-            %span.tel= resume[:contact][:tel]
-          - unless resume[:contact][:email].blank?
-            %a.email{ :href => "mailto:#{resume[:contact][:email]}" }<
-              = resume[:contact][:email]
+          - unless data.resume[:contact][:tel].blank?
+            %span.tel= data.resume[:contact][:tel]
+          - unless data.resume[:contact][:email].blank?
+            %a.email{ :href => "mailto:#{data.resume[:contact][:email]}" }<
+              = data.resume[:contact][:email]
 
           %address.adr<
-            - unless resume[:contact][:address].blank?
-              - address = resume[:contact][:address]
+            - unless data.resume[:contact][:address].blank?
+              - address = data.resume[:contact][:address]
             - unless address[:"street-address"].blank?
               %span.street-address= address[:"street-address"]
             - unless address[:"extended-address"].blank?
@@ -41,9 +41,11 @@
             - unless address[:"country-name"].blank?
               %span.country-name= address[:"country-name"]
         #me
-          %h1.fn#full-name<
-            = resume[:contact][:name]
+          %h1.fn.n#full-name<
+            %span.honorific-prefix= name[:"honorific-prefix"]
+            %abbr.given-name{:title => name[:"given-name"]}= name[:"given-name"][0,1]+'.'
+            %abbr.additional-name{:title => name[:"additional-name"]}= name[:nickname]
+            %span.family-name= name[:"family-name"]
           %h2.role<
-            = resume[:contact][:role]
+            = data.resume[:contact][:role]
       = yield
-    

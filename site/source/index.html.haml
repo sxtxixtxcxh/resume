@@ -1,0 +1,12 @@
+---
+title: "Résumé"
+---
+
+.section#about
+  .content
+    .subsection.summary
+      = Maruku.new(data.resume[:contact][:bio]).to_html
+
+- data.resume.sections.each do |section|
+  = partial 'shared/section', :locals => { :section => section } unless section[:display] === false
+  

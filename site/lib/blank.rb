@@ -1,7 +1,3 @@
-# All files in the 'lib' directory will be loaded
-# before nanoc starts compiling.
-
-
 #
 # The following code comes from Rails and thus is licensed
 #
@@ -29,31 +25,33 @@
 # source: http://github.com/rails/rails/blob/master/activesupport/lib/active_support/core_ext/object/blank.rb
 #
 
+# encoding: utf-8
+
 class Object
   # An object is blank if it's false, empty, or a whitespace string.
-  # For example, "", "   ", +nil+, [], and {} are blank.
+  # For example, "", "   ", +nil+, [], and {} are all blank.
   #
   # This simplifies:
   #
-  #   if !address.nil? && !address.empty?
+  #   if address.nil? || address.empty?
   #
   # ...to:
   #
-  #   if !address.blank?
+  #   if address.blank?
   def blank?
     respond_to?(:empty?) ? empty? : !self
   end
- 
-  # An object is present if it's not blank.
+
+  # An object is present if it's not <tt>blank?</tt>.
   def present?
     !blank?
   end
-  
-  # Returns object if it's #present? otherwise returns nil.
-  # object.presence is equivalent to object.present? ? object : nil.
+
+  # Returns object if it's <tt>present?</tt> otherwise returns +nil+.
+  # <tt>object.presence</tt> is equivalent to <tt>object.present? ? object : nil</tt>.
   #
   # This is handy for any representation of objects where blank is the same
-  # as not present at all.  For example, this simplifies a common check for
+  # as not present at all. For example, this simplifies a common check for
   # HTTP POST/query parameters:
   #
   #   state   = params[:state]   if params[:state].present?
@@ -67,77 +65,75 @@ class Object
     self if present?
   end
 end
- 
-class NilClass #:nodoc:
+
+class NilClass
+  # +nil+ is blank:
+  #
+  #   nil.blank? # => true
+  #
   def blank?
     true
   end
 end
- 
-class FalseClass #:nodoc:
+
+class FalseClass
+  # +false+ is blank:
+  #
+  #   false.blank? # => true
+  #
   def blank?
     true
   end
 end
- 
-class TrueClass #:nodoc:
+
+class TrueClass
+  # +true+ is not blank:
+  #
+  #   true.blank? # => false
+  #
   def blank?
     false
   end
 end
- 
-class Array #:nodoc:
+
+class Array
+  # An array is blank if it's empty:
+  #
+  #   [].blank?      # => true
+  #   [1,2,3].blank? # => false
+  #
   alias_method :blank?, :empty?
 end
- 
-class Hash #:nodoc:
+
+class Hash
+  # A hash is blank if it's empty:
+  #
+  #   {}.blank?                # => true
+  #   {:key => 'value'}.blank? # => false
+  #
   alias_method :blank?, :empty?
-end
- 
-class String #:nodoc:
-  def blank?
-    self !~ /\S/
-  end
-end
-
-def tokenize
-    result = self.name.gsub(/[Ã�Ã�Ã�Ã�Ã�]/, 'a')
-    result.gsub!(/[Ã�Ã�Ã�Ã�]/, 'e')
-    result.gsub!(/[Ã�Ã�Ã�Ã�]/, 'i')
-    result.gsub!(/[Ã�Ã�Ã�Ã�]/, 'o')
-    result.gsub!(/[Ã�Ã�Ã�Ã�]/, 'u')
-    result.gsub!(/[Ã�Å¸]/, 'y')
-    result.gsub!(/[Ã�]/, 'n')
-    result.gsub!(/[Ã�]/, 'c')
-
-    result = result.downcase
-
-    result.gsub!(/[Ã¡Ã Ã¤Ã¢Ã¥]/, 'a')
-    result.gsub!(/[Ã©Ã¨Ã«Ãª]/, 'e')
-    result.gsub!(/[Ã­Ã¬Ã¯Ã®]/, 'i')
-    result.gsub!(/[Ã³Ã²Ã¶Ã´]/, 'o')
-    result.gsub!(/[ÃºÃ¹Ã¼Ã»]/, 'u')
-    result.gsub!(/[Ã½Ã¿]/, 'y')
-    result.gsub!(/[Ã±]/, 'n')
-    result.gsub!(/[Ã§]/, 'c')
-    result.gsub!(/['"]/, '-')                   
-    result.gsub!(/ +/, '-')
-    result.gsub!(/_/, '-')
-    result.gsub!(/(_)$/, '-')
-    result.gsub!(/^(_)/, '-')            
-    result.gsub!(/W+/, '-') # all non-word chars are removed
-    result.gsub!(/-Z/, '') 
-    self.permalink = result
-  end
- 
-class Numeric #:nodoc:
-  def blank?
-    false
-  end
 end
 
 class String
-  def to_permalink
-      (Iconv.new('US-ASCII//TRANSLIT', 'utf-8').iconv self).gsub(/[^\w\s\-\â€”]/,'').gsub(/[^\w]|[\_]/,' ').split.join('-').downcase
+  # A string is blank if it's empty or contains whitespaces only:
+  #
+  #   "".blank?                 # => true
+  #   "   ".blank?              # => true
+  #   "　".blank?               # => true
+  #   " something here ".blank? # => false
+  #
+  def blank?
+    self !~ /[^[:space:]]/
+  end
+end
+
+class Numeric #:nodoc:
+  # No number is blank:
+  #
+  #   1.blank? # => false
+  #   0.blank? # => false
+  #
+  def blank?
+    false
   end
 end

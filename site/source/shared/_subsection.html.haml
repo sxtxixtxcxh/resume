@@ -13,12 +13,12 @@
       - unless subsection[:duration].blank?
         %li.year<
           - unless subsection[:duration][:start].blank?
-            %abbr.dtstart{ :title => subsection[:duration][:start] }>= subsection[:duration][:start].year
+            %abbr.dtstart{ :title => subsection[:duration][:start].iso8601 }>= subsection[:duration][:start].year
           - unless subsection[:duration][:start].year == Time.now.year
             - if subsection[:duration][:end].blank?
               - subsection[:duration][:end] = Time.now
             &mdash;
-            %abbr.dtend{ :title => subsection[:duration][:end] }>= subsection[:duration][:end].year
+            %abbr.dtend{ :title => subsection[:duration][:end].iso8601 }>= subsection[:duration][:end].year
       - unless subsection[:company].blank?
         %li.org= h(subsection[:company])
       - unless subsection[:address].blank?
@@ -38,7 +38,7 @@
   - unless subsection[:skills].blank?
     %ul.skills
       - subsection[:skills].each do |skill|
-        %li.skill{:rel=>'tag'}= h(skill)
+        %li{:rel=>'tag'}= h(skill)
 
   - unless subsection[:summary].blank?
     .summary

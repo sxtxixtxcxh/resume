@@ -1,0 +1,280 @@
+contact:
+  name: 
+    honorific-prefix: "Mr."
+    given-name: "Matthew" 
+    additional-name: "David"
+    nickname: "Dave"
+    family-name: "Auayan"
+  role: "Front End Developer"
+  tel: "+1 425 336 1393"
+  email: "m@auayan.com"
+  address:
+    street-address: "6708 232nd St. SW"
+    locality: "Mountlake Terrace"
+    region: "Washington"
+    postal-code: "98043"
+    country-name: "United States"
+  bio: |
+    I am a front end developer with over 10 years experience writing HTML and CSS, and over 
+    5 years working in back end development. I also have several years working in Graphic Design.
+    I am curious, self taught, and if you cut me, I practically bleed internet.
+
+sections: 
+- title: "Areas of Expertise"
+  type: "skills"
+  subsections:
+
+  - title: "Computer Languages"
+    skills:
+    - "PHP"
+    - "MySQL"
+    - "Ruby"
+    - "JavaScript - including jQuery and Prototype.js"
+    - "CoffeeScript"
+    - "HTML/XHTML - including Haml"
+    - "CSS - including Sass"
+    - "XML"
+
+- title: "Employment History"
+  type: "experience"
+  subsections: 
+  - title: "Front End Developer"
+    duration:
+      start : 2010-08-16T09:00:00.00-08:00
+    company: "Substantial.com"
+    url: http://substantial.com
+    address:
+        street-address: "900 E Pine"
+        extended-street-address: "Ste. 202"
+        locality: "Seattle"
+        region: "Washington"
+        postal-code: "98122"
+        country-name: "United States"
+    summary: |
+      Substantial is a small startup designing and developing websites 
+      for several large companies, including 8inc, CitiBank, Kanye West and others.
+  - title: "Developer"
+    duration:
+      start : 2010-04-16T09:00:00.00-08:00
+    company: "Nology Media"
+    url: http://nologymedia.com
+    address:
+        street-address: "1325 Fourth Avenue"
+        extended-street-address: "Ste. 510"
+        locality: "Seattle"
+        region: "Washington"
+        postal-code: "98101"
+        country-name: "United States"
+    summary: |
+      Nology Media is a new media public relations start up, using social media
+      to plan, execute and manage PR campaigns.
+  - title: "Front End Developer"
+    duration: 
+      start : 2008-01-07T09:00:00.00-08:00
+      end   : 2010-08-13T17:00:00.00-08:00
+    company: "LuxuryRealEstate.com"
+    url: http://www.luxuryrealestate.com
+    address:
+      street-address: "2110 Western Avenue"
+      locality: "Seattle"
+      region: "Washington"
+      postal-code: "98121"
+      country-name: "United States"
+    achievements: 
+    - "Wrote semantic markup for new and existing clients"
+    - "Developed interactive elements for sites using JavaScript"
+    - "Technology Used: XHTML, CSS, JavaScript, Ruby on Rails, PHP"
+    summary: |
+      LuxuryRealEstate.com develops high end real estate websites for
+      clients in the upper echelons of the market.
+
+  - title: "Web Producer"
+    duration: 
+      start : 2007-10-10T09:00:00.00-08:00
+      end   : 2011-08-03T17:00:00.00-08:00
+    company: "Wizards of the Coast"
+    url: "http://wizards.com"
+    address: 
+      street-address: "1600 Lind Ave. SW"
+      extended-street-address: "Ste. 400"
+      locality: "Renton"
+      region: "Washington"
+      postal-code: "98057"
+      country-name: "United States"
+    achievements: 
+    - "Update website content"
+    - "Technology Used: XHTML, XML"
+    summary: |
+      Wizards of the Coast, among a other things, hosts Magic: The Gathering 
+      tournaments around the world. During these tournaments we'd publish 
+      articles, video and audio.
+
+  - title: "Web Designer"
+    duration:
+      start : 2007-08-06T09:00:00.00-08:00
+      end   : 2007-12-22T17:00:00.00-08:00
+    company: "down2night.com"
+    url: "http://down2night.com"
+    address:
+      street-address: "2101 4th Ave."
+      extended-street-address: "Ste. 1050"
+      locality: "Seattle"
+      region: "Washington"
+      postal-code: "98121"
+      country-name: "United States"
+    achievements:
+    - "Maintain and update down2night.com"
+    - "Design sales materials"
+    - "Technology Used: PHP, HTML, CSS, JavaScript"
+    summary: |
+      down2night.com was a location based, event sharing social network.
+
+  - title: "Graphic Artist"
+    duration:
+      start : 2007-07-31T09:00:00.00-08:00
+      end   : 2006-07-31T17:00:00.00-08:00
+    company: "Group Photographers Association"
+    url: "http://groupphotographers.com"
+    address:
+      street-address: "10220 E. Sprague Ave."
+      extended-street-address: "Main Floor"
+      locality: "Spokane Valley"
+      region: "Washington"
+      postal-code: "99206"
+      country-name: "United States"
+    achievements:
+    - "Design artwork and layouts for sales envelopes and other promotional material"
+    - "Coordinate with clients on creating and updating promotional material"
+    - "Technology Used: Photoshop, Pagemaker"
+    summary: |
+      Group Photographers Association is a photo processing and product fabrication 
+      lab for special events, school and sports photographers nationwide. 
+
+  - title: "Graphic Designer"
+    duration:
+      start : 2006-07-01T09:00:00.00-08:00
+      end   : 2007-07-01T09:00:00.00-08:00
+    company: "Washington Photo & Digital"
+    url: "http://washingtonphoto.com"
+    address:
+      street-address: "100 S. Division St."
+      locality: "Spokane"
+      region: "Washington"
+      postal-code: "99201"
+      country-name: "United States"
+    achievements:
+    - "Scan, digitally enhance and print photos from various sources"
+    - "Design artwork and layouts"
+    - "Redesign and maintain http://washingtonphoto.com"
+    - "Technology Used: Photoshop, PHP, HTML, CSS, JavaScript"
+    summary: |
+      Washington Photo was a locally owned print and photo shop.
+
+  - title: "Graphic Designer"
+    duration:
+      start : 2003-07-01T09:00:00.00-08:00
+      end   : 2004-07-01T09:00:00.00-08:00
+    company: "SCW Consulting"
+    url: "http://www.scwconsult.com"
+    address:
+      street-address: "9116 E. Sprague Ave."
+      extended-street-address: "#150"
+      locality: "Spokane"
+      region: "Washington"
+      postal-code: "99206"
+      country-name: "United States"
+    achievements:
+    - "Design and maintain websites from concept to completion for growing clientele base"
+    - "Design user interfaces for custom web applications for clients and in-house"
+    - "Technology Used: Photoshop, Visual Studio, HTML, CSS, JavaScript"
+    summary: |
+      SCW Consulting is a small networking and web consulting firm.
+
+  - title: "Graphic Designer"
+    duration:
+      start : 2002-12-01T09:00:00.00+10:00
+      end   : 2003-04-15T17:00:00.00+10:00
+    company: "IT&E"
+    url: "http://www.ite.net"
+    address:
+      street-address: "122 W. Harmon Ind. Park"
+      extended-street-address: "Suite 103"
+      locality: "Tamuning"
+      region: "Guam"
+      postal-code: "96913"
+      country-name: "United States"
+    achievements:
+    - "Design advertisements for print in various publications"
+    - "Design promotional materials including large format banners and vehicle graphics"
+    - "Design and prepare graphics for the web"
+    - "Design graphics for television"
+    - "Technology Used: Photoshop, Illustrator"
+    summary: |
+      IT&E is a telecommunications company, specializing in long distance and 
+      wireless telephony.
+
+  - title: "Graphic Artist II"
+    duration:
+      start : 2000-08-01T09:00:00.00+10:00
+      end   : 2002-12-01T17:00:00.00+10:00
+    company: "Guam Publications, Inc"
+    url: "http://www.guampdn.com"
+    address:
+      street-address: "244 Archbishop FC Flores St."
+      extended-street-address: "Suite 103"
+      locality: "Hagåtña"
+      region: "Guam"
+      postal-code: "96910"
+      country-name: "United States"
+    achievements:
+    - "Layout and design of advertisements for various clients"
+    - "Preflight photos for print in various media formats"
+    - "Design pages for publication on the web"
+    - "Train graphic artists"
+    - "Technology Used: Photoshop, Dreamweaver, HTML, CSS"
+    summary: |
+      Guam Publications, Inc is a Gannett owned publishing company, the largest in 
+      the Micronesia area. We published a daily news paper as well as several weeklies. 
+- title: "Personal Projects"
+  type: "projects"
+  subsections:
+    - title: "TweetMe.me"
+      url: http://tweetme.me
+      duration: 
+        start : 2010-02-14T09:00:00.00+10:00
+      summary: |
+        TweetMe.me is a web app that uses Google Maps to map geocoded Twitter 
+        posts near your location, determined automatically, written in 
+        JavaScript and HTML5.
+    - title: "GeoIP"
+      url: http://geoip.prototypeapp.com
+      duration:
+        start: 2009-08-29T03:47:13.00+10:00
+      summary: |
+        This is a web service that attempts to geolocate the referrer by IP address. 
+        API documentation is here: 
+        [http://docs.prototypeapps.com/geoip:api](http://docs.prototypeapps.com/geoip:api)
+    - title: "lib.rario.us"
+      url: http://lib.rario.us
+      duration: 
+        start : 2006-01-25T09:00:00.00+10:00
+      summary: |
+        lib.rario.us is a web app for cataloging and publishing the contents of 
+        your media shelves. It uses the Amazon Product API, and is written in PHP, 
+        MySQL, HTML and JavaScript.
+- title: "Higher Education"
+  type: "education"
+  subsections: 
+  - title: "University of Guam"
+    url: "http://uog.edu"
+    address:
+      street-address: "UOG Station"
+      locality: "Mangilao"
+      region: "Guam"
+      postal-code: "96923"
+      country-name: "United States"
+    duration: 
+      start : 1998-09-01T09:00:00.00+10:00
+      end   : 2000-12-01T09:00:00.00+10:00
+    summary: |
+      I majored in Mass Communication and took classes in Broadcasting, Design, Art, Photography
