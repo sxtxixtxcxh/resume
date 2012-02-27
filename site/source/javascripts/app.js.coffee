@@ -1,4 +1,14 @@
 sticky_item = (sticky_item_selector, frame_selector)->
+
+  if $(window).width() < $(frame_selector).width() + parseInt($(frame_selector).css('padding-left'), 10)
+    item_css =
+      position: 'static'
+      top: ''
+      bottom: ''
+      left: ''
+    $(sticky_item_selector).css(item_css)
+    return
+    
   $(frame_selector).each ->
     $frame = $(this);
     $item = $(sticky_item_selector, this);
@@ -51,8 +61,9 @@ sticky_item = (sticky_item_selector, frame_selector)->
         $item.css(item_css)
       
 $(document).ready ->
-  $(window).scroll ->
+  $window = $(window);
+  $window.scroll ->
     sticky_item('h2.title', '.section')
-  $(window).resize ->
+  $window.resize ->
     sticky_item('h2.title', '.section')
 
